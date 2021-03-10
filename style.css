@@ -24,6 +24,7 @@ body {
 
 .clock .number {
     --rot: 0;
+    padding: 3px;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -43,17 +44,35 @@ body {
 .clock .number10 {--rot: 300deg;}
 .clock .number11 {--rot: 330deg;}
 
+.clock .number span {
+    display: inline-block;
+    --rot: 0;
+    transform: rotate(var(--rot))
+}
+
+.clock .number1 span {--rot: -30deg;}
+.clock .number2 span {--rot: -60deg;}
+.clock .number3 span {--rot: -90deg;}
+.clock .number4 span {--rot: -120deg;}
+.clock .number5 span {--rot: -150deg;}
+.clock .number6 span {--rot: -180deg;}
+.clock .number7 span {--rot: -210deg;}
+.clock .number8 span {--rot: -240deg;}
+.clock .number9 span {--rot: -270deg;}
+.clock .number10 span {--rot: -300deg;}
+.clock .number11 span {--rot: -330deg;}
+
 .clock .hand {
     --rot: 0;
     position: absolute;
     bottom: 50%;
     left: 50%;
-    
     border-top-left-radius: 60%;
     border-top-right-radius: 60%;
     z-index: 1;
     transform: translateX(-50%) rotate(calc(var(--rot) * 1deg)); /* translates 50% of its width backwards */
     transform-origin: bottom;
+    
 }
 
 .clock::before {
